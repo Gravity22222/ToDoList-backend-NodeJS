@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
 
-import User from '../app/models/User';
-import Task from '../app/models/Task';
+import User from '../app/models/User.js';
+import Task from '../app/models/Task.js';
 
 const models = [User, Task];
 
