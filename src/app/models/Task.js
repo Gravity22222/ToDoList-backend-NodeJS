@@ -1,4 +1,5 @@
-import Sequelize, { Model } from 'sequelize';
+import Sequelize from 'sequelize';
+const { Model } = Sequelize; // Extrai o Model do pacote importado
 
 class Task extends Model {
   static init(sequelize) {
