@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import * as databaseConfig from '../config/database.js';
+import * as databaseConfig from '../config/database.cjs';
 
 import User from '../app/models/User.js';
 import Task from '../app/models/Task.js';
