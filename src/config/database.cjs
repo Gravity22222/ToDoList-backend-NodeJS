@@ -1,9 +1,14 @@
 module.exports = {
-  dialect: 'YOUR_DIALECT', //example: postgres
-  host: 'YOUR_HOST', //example: localhost
-  username: 'USERNAME_DATABASE',
-  password: 'PASSWORD_DATABASE',
-  database: 'YOUR_DATABASE', //example: tasklist
+  
+  dialect: process.env.DB_DIALECT || 'postgres', 
+  
+
+  host: process.env.DB_HOST, 
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME, 
+  
+  
   define: {
     timestamps: true,
     underscored: true,
