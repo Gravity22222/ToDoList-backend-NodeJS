@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { promisify } from 'util';
 import * as authConfig from '../../config/auth.cjs';
-const authConfig = authConfigCjs.default || authConfigCjs;
+const resolvedAuthConfig = authConfigCjs.default || authConfigCjs;
 
 export default async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -14,7 +14,7 @@ export default async (req, res, next) => {
 
   try {
 
-    const decoded = await promisify(jwt.verify)(token, authConfig.secret);
+    const decoded = await promisify(jwt.verify)(token, resolvedAuthConfig.secret);
 
     req.userId = decoded.id;
 
