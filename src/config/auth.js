@@ -1,4 +1,4 @@
-export default {
-  secret: 'YOUR_SECRET_FOR_TOKEN', //example: 478f3a4c51824ad23cb50c1c60670c0f
-  expiresIn: 'YOUR_EXPIRATION_DATE', //example: 7d
+module.exports = {
+  secret: process.env.APP_SECRET || 'algum_valor_padrao',
+  expiresIn: '7d' // <-- CORRIGIDO para 7 dias
 };
